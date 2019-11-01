@@ -7,7 +7,7 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
+        <!-- Fonts and js -->
             <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,700" rel="stylesheet">
             <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
