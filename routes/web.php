@@ -18,7 +18,15 @@ Route::get('home', function () {
     return view('home');
 });
 
+Route::get('blog', 'blog@parsing');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
