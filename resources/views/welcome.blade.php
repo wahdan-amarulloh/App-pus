@@ -60,8 +60,8 @@
                     <div class="hero-inner">
                         <div class="hero-copy">
                             <div class="container-sm">
-                                <h1 class="hero-title h2-mobile mt-0 is-revealing">Landing template for startups</h1>
-                                <p class="hero-paragraph is-revealing">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+                                <h1 class="hero-title h2-mobile mt-0 is-revealing">App Pus</h1>
+                                <p class="hero-paragraph is-revealing">Aplikasi perpustakaan berbasis web/p>
                                 <div class="hero-form newsletter-form field field-grouped is-revealing">
                                     <div class="control control-expanded">
                                             <!-- skip -->
