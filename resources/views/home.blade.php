@@ -74,7 +74,7 @@
                                                 <tbody>
                                                     @foreach ($buku as $b)
                                                     <tr>
-                                                        <td>{{ $b->nama }}</td>
+                                                        <td><a href="/book/{{ $b->id }}">{{ $b->nama }}</a></td>
                                                         <td>{{ $b->kategori }}</td>
                                                         <td>{{ $b->jumlah }}</td>
                                                         <td>{{ $b->pengarang }}</td>
