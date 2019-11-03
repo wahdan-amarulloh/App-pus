@@ -1,8 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-    Stellar by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    dashboard page
 -->
 <html>
     <head>
@@ -28,10 +26,26 @@
                 <!-- Nav -->
                     <nav id="nav">
                         <ul>
-                            <li><a href="#intro" class="active">Introduction</a></li>
-                            <li><a href="#first">First Section</a></li>
-                            <li><a href="#second">Second Section</a></li>
-                            <li><a href="#cta">Get Started</a></li>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                            </li>
+                            <li><a href="#buku" class="active">Daftar Buku</a></li>
+                            <li><a href="#first">Peminjaman</a></li>
+                            <li><a href="#second">Pengembalian</a></li>
+                            <li><a href="#cta">Laporan</a></li>
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                            </li>
                         </ul>
                     </nav>
 
@@ -39,103 +53,43 @@
                     <div id="main">
 
                         <!-- Introduction -->
-                            <section id="intro" class="main">
+                            <section id="buku" class="main">
                                 <div class="spotlight">
                                     <div class="content">
                                         <header class="major">
-                                            <h2>Ipsum sed adipiscing</h2>
+                                            <h2>Daftar Buku</h2>
+                                            <strong>Daftar Buku Terbaru</strong>
                                         </header>
-                                        <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-                                        adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-                                        Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-                                        <ul class="actions">
-                                            <li><a href="generic.html" class="button">Learn More</a></li>
-                                        </ul>
+                                            <div class="table-wrapper">
+                                            <table class="alt">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Nama</th>
+                                                        <th>Kategori</th>
+                                                        <th>Jumlah</th>
+                                                        <th>Pengarang</th>
+                                                        <th>Tahun</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach ($buku as $b)
+                                                    <tr>
+                                                        <td>{{ $b->nama }}</td>
+                                                        <td>{{ $b->kategori }}</td>
+                                                        <td>{{ $b->jumlah }}</td>
+                                                        <td>{{ $b->pengarang }}</td>
+                                                        <td>{{ $b->tahun }}</td>
+                                                    </tr>
+                                                    @endforeach
+                                                </tbody>
+
+                                            </table>
+                                        </div>
                                     </div>
-                                    <span class="image"><img src="{{ asset('images/pic01.jpg') }}" alt="" /></span>
                                 </div>
                             </section>
 
                         <!-- First Section -->
-                            <section id="first" class="main special">
-                                <header class="major">
-                                    <h2>Magna veroeros</h2>
-                                </header>
-                                <ul class="features">
-                                    <li>
-                                        <span class="icon solid major style1 fa-code"></span>
-                                        <h3>Ipsum consequat</h3>
-                                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                                    </li>
-                                    <li>
-                                        <span class="icon major style3 fa-copy"></span>
-                                        <h3>Amed sed feugiat</h3>
-                                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                                    </li>
-                                    <li>
-                                        <span class="icon major style5 fa-gem"></span>
-                                        <h3>Dolor nullam</h3>
-                                        <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                                    </li>
-                                </ul>
-                                <footer class="major">
-                                    <ul class="actions special">
-                                        <li><a href="generic.html" class="button">Learn More</a></li>
-                                    </ul>
-                                </footer>
-                            </section>
-
-                        <!-- Second Section -->
-                            <section id="second" class="main special">
-                                <header class="major">
-                                    <h2>Ipsum consequat</h2>
-                                    <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                                    posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-                                </header>
-                                <ul class="statistics">
-                                    <li class="style1">
-                                        <span class="icon solid fa-code-branch"></span>
-                                        <strong>5,120</strong> Etiam
-                                    </li>
-                                    <li class="style2">
-                                        <span class="icon fa-folder-open"></span>
-                                        <strong>8,192</strong> Magna
-                                    </li>
-                                    <li class="style3">
-                                        <span class="icon solid fa-signal"></span>
-                                        <strong>2,048</strong> Tempus
-                                    </li>
-                                    <li class="style4">
-                                        <span class="icon solid fa-laptop"></span>
-                                        <strong>4,096</strong> Aliquam
-                                    </li>
-                                    <li class="style5">
-                                        <span class="icon fa-gem"></span>
-                                        <strong>1,024</strong> Nullam
-                                    </li>
-                                </ul>
-                                <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-                                <footer class="major">
-                                    <ul class="actions special">
-                                        <li><a href="generic.html" class="button">Learn More</a></li>
-                                    </ul>
-                                </footer>
-                            </section>
-
-                        <!-- Get Started -->
-                            <section id="cta" class="main special">
-                                <header class="major">
-                                    <h2>Congue imperdiet</h2>
-                                    <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                                    posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-                                </header>
-                                <footer class="major">
-                                    <ul class="actions special">
-                                        <li><a href="generic.html" class="button primary">Get Started</a></li>
-                                        <li><a href="generic.html" class="button">Learn More</a></li>
-                                    </ul>
-                                </footer>
-                            </section>
 
                     </div>
 
