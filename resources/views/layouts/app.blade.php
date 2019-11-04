@@ -4,7 +4,7 @@
 -->
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>App Pus</title>
         <meta charset="utf-8" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -19,9 +19,9 @@
                 <!-- Header -->
                     <header id="header" class="alt">
                         <span class="logo"><img src="{{ asset('images/logo.svg') }}" alt="" /></span>
-                        <h1>Stellar</h1>
-                        <p>Just another free, fully responsive site template<br />
-                        built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+                        <h1>App Pus</h1>
+                        <p>Manajemen Perpustakaan Berbasis Web<br />
+                        built by <a href="https://wahdam-amar.github.io/portofolio/">Wahdam Amarulloh</a>.</p>
                     </header>
 
                 <!-- Nav -->
