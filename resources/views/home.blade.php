@@ -7,8 +7,8 @@
         <title>Stellar by HTML5 UP</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-        <noscript><link rel="stylesheet" href="{{ asset('css/noscript.css') }}" /></noscript>
+        <link rel="stylesheet" href="{{ asset('/css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ asset('/css/noscript.css') }}" /></noscript>
     </head>
     <body class="is-preload">
 
@@ -17,7 +17,7 @@
 
                 <!-- Header -->
                     <header id="header" class="alt">
-                        <span class="logo"><img src="{{ asset('images/logo.svg') }}" alt="" /></span>
+                        <span class="logo"><img src="{{ asset('/images/logo.svg') }}" alt="" /></span>
                         <h1>Stellar</h1>
                         <p>Just another free, fully responsive site template<br />
                         built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
@@ -126,13 +126,13 @@
             </div>
 
         <!-- Scripts -->
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <script src="{{ asset('js/jquery.scrollex.min.js') }}"></script>
-            <script src="{{ asset('js/jquery.scrolly.min.js') }}"></script>
-            <script src="{{ asset('js/browser.min.js') }}"></script>
-            <script src="{{ asset('js/breakpoints.min.js') }}"></script>
-            <script src="{{ asset('js/util.js') }}"></script>
-            <script src="{{ asset('js/main.js') }}"></script>
+            <script src="{{ asset('/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('/js/jquery.scrollex.min.js') }}"></script>
+            <script src="{{ asset('/js/jquery.scrolly.min.js') }}"></script>
+            <script src="{{ asset('/js/browser.min.js') }}"></script>
+            <script src="{{ asset('/js/breakpoints.min.js') }}"></script>
+            <script src="{{ asset('/js/util.js') }}"></script>
+            <script src="{{ asset('/js/main.js') }}"></script>
 
     </body>
 </html>
